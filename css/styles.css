@@ -634,6 +634,33 @@ h3 {
     opacity: 1;
 }
 
+.header-subscribe {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.email-subscribe {
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+}
+
+.email-subscribe::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--white);
+    letter-spacing: 0.04em;
+}
+
 /* modal window */
 
 .backdrop {
@@ -724,25 +751,23 @@ h3 {
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    margin-bottom: 8px;
     padding-left: 38px;
+    outline: transparent;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input-comment {
-    width: 100%;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    height: 120px;
-    padding-left: 19px;
+.modal-input:focus,
+.modal-textarea:focus{
+    border-color: var(--iris);
 }
 
-.modal-input-comment::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+.modal-input:focus + .modal-icon {
+    fill: var(--iris);
+}
+
+.input-wrap {
+    position: relative;
 }
 
 .btn-send {
@@ -756,7 +781,7 @@ h3 {
     cursor: pointer;
     border-radius: 4px;
     padding: 16px 32px;
-    margin-top: 48px;
+    margin-top: 16px;
     border:1px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -765,6 +790,11 @@ h3 {
 .btn-send:hover,
 .btn-send:focus {
     background-color: var(--ocean);
+}
+
+.container-for-modal-btn {
+    display: flex;
+    justify-content: center;
 }
 
 .label-name-first {
@@ -792,4 +822,42 @@ h3 {
 .modal-icon {
     position: absolute;
     fill: var(--navy-blue-color);
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-field {
+    margin-bottom: 8px;
+}
+
+.modal-textarea {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
+    outline: transparent;
+    padding: 8px 16px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.label-pp {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: var(--light-slate);
 }
