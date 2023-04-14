@@ -663,7 +663,7 @@ h3 {
 }
 
 .btn-sub {
-    display: flex;
+    display: block;
     background: var(--iris);
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -688,6 +688,11 @@ h3 {
 }
 
 .container-subscribe {
+    display: flex;
+    gap: 24px;
+}
+
+.email-form {
     display: block;
 }
 
