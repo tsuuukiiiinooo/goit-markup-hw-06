@@ -359,8 +359,8 @@
                 </div>
                 <div>
                     <h3 class="header-subscribe">Subscribe</h3>
-                    <div>
-                        <form>
+                    <div class="container-subscribe">
+                        <form class="email-form">
                             <label for="email-subscribe"></label>
                             <input 
                             type="text"
@@ -368,9 +368,12 @@
                             class="email-subscribe"
                             placeholder="E-mail">
                         </form>
-                    </div>
-                    <div>
-
+                        <button class="btn-sub" type="submit">
+                            Subscribe
+                            <svg class="icon-paper-plane" width="24" height="24">
+                                <use href="./images/icons.svg#icon-paper-plane"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -436,8 +439,11 @@
                         placeholder="Text input"></textarea>
                     </div>
                     <div class="modal-field">
-                        <input type="checkbox" name="privacy-policy" id="privacy-polic" value="true">
-                        <label class="label-pp" for="privacy-polic">I accept the terms and conditions of the <a href="#">Privacy Policy</a></label>
+                        <input class="checkbox-pp visually-hidden" type="checkbox" name="privacy-policy" id="privacy-polic" value="true">
+                        <label class="label-pp" for="privacy-polic">
+                            I accept the terms and conditions of the 
+                            <a href="#">Privacy Policy</a>
+                        </label>
                     </div>
                     <div class="container-for-modal-btn">
                         <button type="submit" class="btn-send">Send</button>
